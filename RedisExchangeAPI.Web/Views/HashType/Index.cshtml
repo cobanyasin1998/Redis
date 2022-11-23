@@ -1,0 +1,17 @@
+﻿@model Dictionary<string,string>
+
+
+<form method="post" asp-action="Add" enctype="application/x-www-form-urlencoded">
+
+	<input type="text" name="name" />
+	<input type="text" name="val" />
+
+	<button type="submit">Kaydet</button>
+
+</form>
+
+@foreach (var item in Model)
+{
+
+	<h3>@item.Key => @item.Value <a asp-controller="HashType" asp-action="DeleteItem" asp-route-name="@item">Sil</a></h3>
+}

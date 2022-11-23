@@ -1,0 +1,13 @@
+﻿@{
+	ViewData["Title"] = "Show";
+	ProductDTO p_1 = ViewBag.Product1 as ProductDTO;
+	ProductDTO p_2 = ViewBag.Product2 as ProductDTO;
+
+}
+
+@if (@p_1 != null)
+{
+	<h2>@p_1.Name ==> @p_1.Price</h2>
+<h2>@p_2.Name ==> @p_2.Price</h2>
+}
+

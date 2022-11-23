@@ -1,0 +1,15 @@
+﻿@model List<string>
+
+
+<form method="post" asp-action="Add" enctype="application/x-www-form-urlencoded">
+
+	<input type="text" name="name" />
+	<button type="submit">Kaydet</button>
+
+</form>
+
+@foreach (var item in Model)
+{
+
+	<h3>@item <a asp-controller="ListType" asp-action="DeleteItem" asp-route-name="@item">Sil</a></h3>
+}
